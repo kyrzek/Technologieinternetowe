@@ -1,12 +1,11 @@
 [versions]
-# Stabilny zestaw "Golden Stack" dla Kotlin 2.0
-coilCompose = "3.4.0"
 kotlin = "2.0.0"
 compose = "1.6.11"
 coroutines = "1.8.1"
 ktor = "3.0.0"
 jetbrains-lifecycle = "2.8.0"
-kamel = "1.0.0-beta.7"
+# Dodajemy wersję dla Coila
+coil3 = "3.0.4"
 
 # Android SDK
 android-compileSdk = "34"
@@ -15,11 +14,11 @@ android-targetSdk = "34"
 jetbrainsKotlinJvm = "2.0.0"
 
 [libraries]
-
+# NASZ NOWY COIL (Zamiast Kamela)
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil3" }
+coil-network-ktor3 = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coil3" }
 
 # Ktor Engines (Silniki HTTP)
-coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
-coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coilCompose" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-js = { module = "io.ktor:ktor-client-js", version.ref = "ktor" }
 

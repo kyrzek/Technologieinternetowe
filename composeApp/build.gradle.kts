@@ -9,9 +9,7 @@ plugins {
 }
 
 kotlin {
-    // 1. DEFINICJA CELÓW (TARGETS)
-    androidTarget() // To naprawi błąd "Missing androidTarget()"
-
+    androidTarget()
     jvm()
 
     js {
@@ -25,47 +23,44 @@ kotlin {
         binaries.executable()
     }
 
-    // 2. KONFIGURACJA ZALEŻNOŚCI (SOURCE SETS)
     sourceSets {
         commonMain.dependencies {
+            // Podstawowe biblioteki KMP
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.jetbrains.lifecycle.runtimeCompose)
             implementation(libs.jetbrains.lifecycle.viewmodel.compose)
+
+            // Ktor (Wieloplatformowy klient HTTP)
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
-//            implementation("io.coil-kt.coil3:coil-compose:3.0.2")
-//            implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.2")
-            // Biblioteki Compose
+
+            // COIL 3 (Ładowanie obrazków z sieci za pomocą Ktora)
+            implementation(libs.coil.compose)
+            implementation(libs.coil.network.ktor3)
+
+            // Compose Multiplatform
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
-            implementation(kotlin("reflect"))
-        }
-
-        val jvmMain by getting {
-            dependencies {
-                implementation(compose.desktop.currentOs)
-                implementation(libs.ktor.client.okhttp)
-            }
         }
 
         androidMain.dependencies {
             implementation(libs.kotlinx.coroutines.android)
             implementation(libs.androidx.activity.compose)
-            implementation(libs.ktor.client.okhttp)
+            implementation(libs.ktor.client.okhttp) // Ktor dla Androida używa OkHttp
         }
 
         jvmMain.dependencies {
-            implementation(libs.ktor.client.okhttp)
+            implementation(compose.desktop.currentOs)
+            implementation(libs.ktor.client.okhttp) // Ktor dla Windowsa używa OkHttp
         }
 
-        // SILNIK DLA PRZEGLĄDARKI (JS/Wasm)
         jsMain.dependencies {
-            implementation(libs.ktor.client.js)
+            implementation(libs.ktor.client.js) // Ktor dla przeglądarki używa silnika JS
         }
     }
 }
@@ -78,16 +73,7 @@ android {
         applicationId = "pl.lipov.technologieinternetowe"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
     }
-
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
