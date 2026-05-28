@@ -181,13 +181,13 @@ fun App() {
                 if (czyPokazacBoki) {
                     Row(modifier = Modifier.fillMaxSize()) {
                         AsyncImage(
-                            model = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
+                            model = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aldh.png",
                             contentDescription = "Lewy bok",
                             modifier = Modifier.weight(1f).fillMaxHeight(),
                             contentScale = ContentScale.Crop
                         )
                         AsyncImage(
-                            model = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
+                            model = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aldh.png",
                             contentDescription = "Prawy bok",
                             modifier = Modifier.weight(1f).fillMaxHeight(),
                             contentScale = ContentScale.Crop
@@ -334,7 +334,7 @@ fun WidokSzczegolowFrakcji(frakcja: Frakcja, naPowrot: () -> Unit) {
                     Text(
                         text = element.tekst,
                         style = MaterialTheme.typography.bodyLarge,
-                        color = Color.Gray,
+                        color = Color.White,
                         modifier = Modifier.fillMaxWidth(),
                         textAlign = TextAlign.Justify
                     )
