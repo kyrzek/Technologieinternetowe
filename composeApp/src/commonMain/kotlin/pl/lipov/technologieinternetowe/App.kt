@@ -47,86 +47,99 @@ data class Frakcja(
 val bazaFrakcji = listOf(
     Frakcja(
         tytul = "Astartes",
-        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
+        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/astartes.png",
         elementyOpisu = listOf(
             ElementOpisu.Akapit("Największe, galaktyczne mocarstwo w Drodze Mlecznej. Przetrwanie miliardów ludzi opiera się na nieustannej wojnie i wierze w Boga-Imperatora."),
             ElementOpisu.Obrazek(
                 url = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
                 podpis = "Symbol Imperium (Aquila)"
             ),
-            ElementOpisu.Akapit("Ich armie składają się z niezliczonych gwardzistów oraz legendarnych Kosmicznych Marines. Każdego dnia na tysiącach planet toczą się krwawe zmagania w obronie ludzkości przed obcymi i demonami."),
-            ElementOpisu.Akapit("Technologia Imperium jest w stagnacji - opiera się na reliktach z Mrocznych Wieków Technologii. Konstrukcją i naprawą maszyn zajmują się hermetyczni Kapłani Maszyny (Adeptus Mechanicus).")
+            ElementOpisu.Akapit("Ich armie składają się z niezliczonych gwardzistów oraz legendarnych Kosmicznych Marines. Każdego " +
+                    "dnia na tysiącach planet toczą się krwawe zmagania w obronie ludzkości przed obcymi i demonami."),
+            ElementOpisu.Akapit("Technologia Imperium jest w stagnacji - opiera się na reliktach z Mrocznych Wieków Technologii. " +
+                    "Konstrukcją i naprawą maszyn zajmują się hermetyczni Kapłani Maszyny (Adeptus Mechanicus).")
         )
     ),
     Frakcja(
         tytul = "Imperium",
         imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
         elementyOpisu = listOf(
-            ElementOpisu.Akapit("Największe, galaktyczne mocarstwo w Drodze Mlecznej. Przetrwanie miliardów ludzi opiera się na nieustannej wojnie i wierze w Boga-Imperatora."),
+            ElementOpisu.Akapit("Największe, galaktyczne mocarstwo w Drodze Mlecznej. Przetrwanie miliardów " +
+                    "ludzi opiera się na nieustannej wojnie i wierze w Boga-Imperatora."),
             ElementOpisu.Obrazek(
                 url = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
                 podpis = "Symbol Imperium (Aquila)"
             ),
-            ElementOpisu.Akapit("Ich armie składają się z niezliczonych gwardzistów oraz legendarnych Kosmicznych Marines. Każdego dnia na tysiącach planet toczą się krwawe zmagania w obronie ludzkości przed obcymi i demonami."),
-            ElementOpisu.Akapit("Technologia Imperium jest w stagnacji - opiera się na reliktach z Mrocznych Wieków Technologii. Konstrukcją i naprawą maszyn zajmują się hermetyczni Kapłani Maszyny (Adeptus Mechanicus).")
+            ElementOpisu.Akapit("Ich armie składają się z niezliczonych gwardzistów oraz legendarnych Kosmicznych Marines. " +
+                    "Każdego dnia na tysiącach planet toczą się krwawe zmagania w obronie ludzkości przed obcymi i demonami."),
+            ElementOpisu.Akapit("Technologia Imperium jest w stagnacji - opiera się na reliktach z Mrocznych Wieków Technologii. " +
+                    "Konstrukcją i naprawą maszyn zajmują się hermetyczni Kapłani Maszyny (Adeptus Mechanicus).")
         )
     ),
     Frakcja(
         tytul = "Chaos",
-        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
+        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/chaos.png",
         elementyOpisu = listOf(
-            ElementOpisu.Akapit("Zdeprawowane siły czerpiące moc z wymiaru zwanego Osnową. Bogowie Chaosu kuszą śmiertelników potęgą, zmieniając ich w demony i heretyków, których jedynym celem jest zniszczenie galaktyki.")
+            ElementOpisu.Akapit("Zdeprawowane siły czerpiące moc z wymiaru zwanego Osnową. Bogowie Chaosu kuszą śmiertelników potęgą, " +
+                    "zmieniając ich w demony i heretyków, których jedynym celem jest zniszczenie galaktyki.")
         )
     ),
     Frakcja(
         tytul = "Orkowie",
-        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
+        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/orcs.png",
         elementyOpisu = listOf(
-            ElementOpisu.Akapit("Wielcy, zieloni i brutalni. Orkowie żyją tylko dla walki. Nie znają strachu, a ich siła bierze się z dziwnej mocy psychicznej, która sprawia, że jeśli wierzą, że coś działa (np. broń zrobiona ze złomu) - to to działa.")
+            ElementOpisu.Akapit("Wielcy, zieloni i brutalni. Orkowie żyją tylko dla walki. Nie znają strachu, " +
+                    "a ich siła bierze się z dziwnej mocy psychicznej, która sprawia, że jeśli wierzą, że coś działa (np. broń zrobiona ze złomu) - to to działa.")
         )
     ),
     Frakcja(
         tytul = "Aeldari",
-        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
+        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aeldari.png",
         elementyOpisu = listOf(
-            ElementOpisu.Akapit("Kiedyś władcy galaktyki, dziś wymierająca rasa uchodźców o szpiczastych uszach (kosmiczne elfy). Posiadają niezwykle zaawansowaną technologię i polegają na precyzyjnych, błyskawicznych uderzeniach.")
+            ElementOpisu.Akapit("Kiedyś władcy galaktyki, dziś wymierająca rasa uchodźców o szpiczastych" +
+                    " uszach (kosmiczne elfy). Posiadają niezwykle zaawansowaną technologię i polegają na precyzyjnych, błyskawicznych uderzeniach.")
         )
     ),
     Frakcja(
         tytul = "Nekroni",
-        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
+        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/necron.png",
         elementyOpisu = listOf(
-            ElementOpisu.Akapit("Miliony lat temu zamienili swoje ciała na niezniszczalne, metalowe szkielety. Przebudzili się ze snu stazy, by odzyskać dawną chwałę. Mają broń, która rozpada materię na atomy.")
+            ElementOpisu.Akapit("Miliony lat temu zamienili swoje ciała na niezniszczalne, metalowe szkielety. " +
+                    "Przebudzili się ze snu stazy, by odzyskać dawną chwałę. Mają broń, która rozpada materię na atomy.")
         )
     ),
     Frakcja(
         tytul = "Tyranidzi",
-        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
+        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/tyranid.png",
         elementyOpisu = listOf(
-            ElementOpisu.Akapit("Pozagalaktyczny rój potworów kierowany przez jeden Umysł Roju. Nie budują statków z metalu - wszystko u nich jest biologiczne. Pożerają całe planety do gołej skały, wchłaniając biomasę.")
+            ElementOpisu.Akapit("Pozagalaktyczny rój potworów kierowany przez jeden Umysł Roju. " +
+                    "Nie budują statków z metalu - wszystko u nich jest biologiczne. Pożerają całe planety do gołej skały, wchłaniając biomasę.")
         )
     ),
     Frakcja(
         tytul = "T'au",
-        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
+        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/tau.png",
         elementyOpisu = listOf(
-            ElementOpisu.Akapit("Młoda, bardzo dynamicznie rozwijająca się rasa kosmitów. Ich filozofią jest 'Większe Dobro'. Nie walczą wręcz, polegają na gigantycznych mechach bojowych i potężnych działach plazmowych.")
+            ElementOpisu.Akapit("Młoda, bardzo dynamicznie rozwijająca się rasa kosmitów. " +
+                    "Ich filozofią jest 'Większe Dobro'. Nie walczą wręcz, polegają na gigantycznych mechach bojowych i potężnych działach plazmowych.")
         )
     ),
     Frakcja(
         tytul = "Votann",
-        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
+        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/votann.png",
         elementyOpisu = listOf(
-            ElementOpisu.Akapit("Największe, galaktyczne mocarstwo w Drodze Mlecznej. Przetrwanie miliardów ludzi opiera się na nieustannej wojnie i wierze w Boga-Imperatora."),
+            ElementOpisu.Akapit("Największe, galaktyczne mocarstwo w Drodze Mlecznej. " +
+                    "Przetrwanie miliardów ludzi opiera się na nieustannej wojnie i wierze w Boga-Imperatora."),
             ElementOpisu.Obrazek(
                 url = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png",
                 podpis = "Symbol Imperium (Aquila)"
             ),
-            ElementOpisu.Akapit("Ich armie składają się z niezliczonych gwardzistów oraz legendarnych Kosmicznych Marines. Każdego dnia na tysiącach planet toczą się krwawe zmagania w obronie ludzkości przed obcymi i demonami."),
-            ElementOpisu.Akapit("Technologia Imperium jest w stagnacji - opiera się na reliktach z Mrocznych Wieków Technologii. Konstrukcją i naprawą maszyn zajmują się hermetyczni Kapłani Maszyny (Adeptus Mechanicus).")
+            ElementOpisu.Akapit("Ich armie składają się z niezliczonych gwardzistów oraz legendarnych Kosmicznych Marines." +
+                    " Każdego dnia na tysiącach planet toczą się krwawe zmagania w obronie ludzkości przed obcymi i demonami."),
+            ElementOpisu.Akapit("Technologia Imperium jest w stagnacji - opiera się na reliktach z Mrocznych Wieków Technologii." +
+                    " Konstrukcją i naprawą maszyn zajmują się hermetyczni Kapłani Maszyny (Adeptus Mechanicus).")
         )
     )
-
 )
 
 // ==========================================
@@ -246,7 +259,7 @@ fun WidokGlownegoMenu(naKlikniecieWKarte: (Frakcja) -> Unit) {
                 shape = RectangleShape
             ) {
                 AsyncImage(
-                    model = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aquilla.png", // Twój link do bannera
+                    model = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/whkk.png",
                     contentDescription = "Banner główny",
                     modifier = Modifier
                         .fillMaxWidth()
