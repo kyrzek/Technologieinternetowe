@@ -94,10 +94,20 @@ val bazaFrakcji = listOf(
     ),
     Frakcja(
         tytul = "Aeldari",
-        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aeld_logo.png",
+        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/ald_logo.png",
         elementyOpisu = listOf(
             ElementOpisu.Akapit("Kiedyś władcy galaktyki, dziś wymierająca rasa uchodźców o szpiczastych" +
-                    " uszach (kosmiczne elfy). Posiadają niezwykle zaawansowaną technologię i polegają na precyzyjnych, błyskawicznych uderzeniach.")
+                    " uszach (kosmiczne elfy). Posiadają niezwykle zaawansowaną technologię i polegają na precyzyjnych, błyskawicznych uderzeniach."),
+            ElementOpisu.Obrazek(
+                url = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aeld.png",
+                podpis = "Wojownik Aeldari"
+            ),
+            ElementOpisu.Akapit("Ich armie składają się z niezliczonych gwardzistów oraz legendarnych Kosmicznych Marines. " +
+                    "Każdego dnia na tysiącach planet toczą się krwawe zmagania w obronie ludzkości przed obcymi i demonami."),
+            ElementOpisu.Akapit("Technologia Imperium jest w stagnacji - opiera się na reliktach z Mrocznych Wieków Technologii. " +
+                    "Konstrukcją i naprawą maszyn zajmują się hermetyczni Kapłani Maszyny (Adeptus Mechanicus).")
+
+
         )
     ),
     Frakcja(
@@ -256,17 +266,21 @@ fun WidokGlownegoMenu(naKlikniecieWKarte: (Frakcja) -> Unit) {
         item(span = { GridItemSpan(maxLineSpan) }) {
             ElevatedCard(
                 modifier = Modifier.fillMaxWidth(),
-                shape = RectangleShape
+                shape = RectangleShape,
+                colors = CardDefaults.elevatedCardColors(
+                    containerColor = Color(0xFF1E2124)
+                )
+
             ) {
                 AsyncImage(
-                    model = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/whkk.png",
+                    model = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/wh_logo.png",
                     contentDescription = "Banner główny",
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(250.dp) // Ustawiamy wysokość bannera (możesz dać np. 300.dp, jeśli ma być większy)
+                        .height(250.dp)
                         .clip(RectangleShape),
-                    // Używamy "Crop", aby obraz całkowicie i bez pustych pasów wypełnił kartę
-                    contentScale = ContentScale.Crop
+
+                    contentScale = ContentScale.Fit
                 )
             }
         }
@@ -298,9 +312,9 @@ fun WidokSzczegolowFrakcji(frakcja: Frakcja, naPowrot: () -> Unit) {
         Button(
             onClick = naPowrot,
             modifier = Modifier.padding(bottom = 16.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color.DarkGray)
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Gray)
         ) {
-            Text("← Wróć do menu", color = Color.Gray)
+            Text("← Wróć do menu", color = Color.LightGray)
         }
 
         // Duży, dopasowany obrazek na górze
@@ -334,7 +348,7 @@ fun WidokSzczegolowFrakcji(frakcja: Frakcja, naPowrot: () -> Unit) {
                     Text(
                         text = element.tekst,
                         style = MaterialTheme.typography.bodyLarge,
-                        color = Color.White,
+                        color = Color.Gray,
                         modifier = Modifier.fillMaxWidth(),
                         textAlign = TextAlign.Justify
                     )
@@ -358,7 +372,7 @@ fun WidokSzczegolowFrakcji(frakcja: Frakcja, naPowrot: () -> Unit) {
                             Text(
                                 text = element.podpis,
                                 style = MaterialTheme.typography.labelMedium,
-                                color = Color.Black,
+                                color = Color.Gray,
                                 textAlign = TextAlign.Center
                             )
                         }
@@ -384,7 +398,10 @@ fun GameCard(
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onClick() },
-        shape = RectangleShape
+        shape = RectangleShape,
+        colors = CardDefaults.elevatedCardColors(
+            containerColor = Color(0xFF1E2124)
+        )
     ) {
         Column {
             AsyncImage(
@@ -401,6 +418,7 @@ fun GameCard(
                 Text(
                     text = title,
                     style = MaterialTheme.typography.titleLarge,
+                    color = Color.Gray,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
