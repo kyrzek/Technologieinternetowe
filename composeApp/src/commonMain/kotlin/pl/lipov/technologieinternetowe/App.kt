@@ -94,7 +94,7 @@ val bazaFrakcji = listOf(
     ),
     Frakcja(
         tytul = "Aeldari",
-        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/ald_logo.png",
+        imageUrl = "https://raw.githubusercontent.com/kyrzek/Technologieinternetowe/master/images/aeldari.png",
         elementyOpisu = listOf(
             ElementOpisu.Akapit("Kiedyś władcy galaktyki, dziś wymierająca rasa uchodźców o szpiczastych" +
                     " uszach (kosmiczne elfy). Posiadają niezwykle zaawansowaną technologię i polegają na precyzyjnych, błyskawicznych uderzeniach."),
